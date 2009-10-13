@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+rm -fr solr/logs solr/solr/data solr/work
+mkdir solr/logs solr/solr/data solr/work

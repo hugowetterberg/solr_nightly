@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+cd solr
+java -jar start.jar

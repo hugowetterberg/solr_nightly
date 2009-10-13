@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+curl "http://people.apache.org/builds/lucene/solr/nightly/solr-`date -v-1d +"%Y-%m-%d"`.zip" > nightly.zip
+unzip nightly.zip
+
+rm nightly.zip
+rm -fr solr
+
+mv apache-solr-nightly/example solr
+rm -fr apache-solr-nightly
+
+cp drupal-config/* solr/solr/conf/
