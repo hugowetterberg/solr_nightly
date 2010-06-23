@@ -1,4 +1,4 @@
-Solr Nightly
+Solr 1.4.0
 ============
 
 This is a set of convenience scripts for daily drupal use of solr in a dev environment.

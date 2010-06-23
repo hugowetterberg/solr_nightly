@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-curl "http://people.apache.org/builds/lucene/solr/nightly/solr-`date -v-1d +"%Y-%m-%d"`.zip" > nightly.zip
-unzip nightly.zip
+curl "http://apache.dataphone.se/lucene/solr/1.4.0/apache-solr-1.4.0.zip" > apache-solr-1.4.0.zip.zip
+unzip apache-solr-1.4.0.zip
 
-rm nightly.zip
+rm apache-solr-1.4.0.zip
 rm -fr solr
 
 mv apache-solr-nightly/example solr
