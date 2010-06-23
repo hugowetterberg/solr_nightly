@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
-curl "http://apache.dataphone.se/lucene/solr/1.4.0/apache-solr-1.4.0.zip" > apache-solr-1.4.0.zip.zip
+if [ -f ./apache-solr-1.4.0.zip ]; then
+  echo "Using downloaded solr file"
+else
+  curl "http://apache.dataphone.se/lucene/solr/1.4.0/apache-solr-1.4.0.zip" > apache-solr-1.4.0.zip
+fi
 unzip apache-solr-1.4.0.zip
-
-rm apache-solr-1.4.0.zip
 rm -fr solr
 
-mv apache-solr-nightly/example solr
-rm -fr apache-solr-nightly
+mv apache-solr-1.4.0/example solr
+rm -fr apache-solr-1.4.0
 
 cp drupal-config/* solr/solr/conf/
